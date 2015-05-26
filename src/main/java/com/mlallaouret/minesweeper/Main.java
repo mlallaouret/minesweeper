@@ -1,6 +1,7 @@
 package com.mlallaouret.minesweeper;
 
-import javafx.util.Pair;
+
+import org.apache.commons.lang3.tuple.Pair;
 
 /**
  * Created by mlallaouret on 5/22/15.

@@ -1,7 +1,7 @@
 package com.mlallaouret.minesweeper;
 
 
-import javafx.util.Pair;
+import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -85,7 +85,7 @@ public class Game {
                 Integer height = gameUtil.parsePlayerChoice(splitGridSize[1].trim());
 
                 if (checkGridDimensionNumber(width) && checkGridDimensionNumber(height)) {
-                    return new Pair<Integer, Integer>(width, height);
+                    return Pair.of(width, height);
                 }
 
             } else {
@@ -105,7 +105,7 @@ public class Game {
                 Integer height = gameUtil.parsePlayerChoice(splitGridSize[1].trim());
 
                 if (checkWidthCoordinate(width) && checkHeightCoordinate(height)) {
-                    return new Pair<Integer, Integer>(width, height);
+                    return Pair.of(width, height);
                 }
 
             } else {

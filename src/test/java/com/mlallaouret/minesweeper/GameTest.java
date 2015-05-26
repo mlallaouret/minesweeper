@@ -1,6 +1,6 @@
 package com.mlallaouret.minesweeper;
 
-import javafx.util.Pair;
+import org.apache.commons.lang3.tuple.Pair;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -109,7 +109,7 @@ public class GameTest {
 
     @Test
     public void testAskPlayerForCoordinatesNominal() {
-        Pair<Integer, Integer> expectedCoordinates = new Pair<Integer, Integer>(2, 2);
+        Pair<Integer, Integer> expectedCoordinates = Pair.of(2, 2);
         String userInput = "2,2";
         String splitUserInput = "2";
         int gridDimension = 6;
@@ -129,7 +129,7 @@ public class GameTest {
 
     @Test
     public void testAskPlayerForCoordinatesFailedWrongFormat() {
-        Pair<Integer, Integer> expectedCoordinates = new Pair<Integer, Integer>(2, 2);
+        Pair<Integer, Integer> expectedCoordinates = Pair.of(2, 2);
         String wrongUserInput = "gjhjg";
         String goodUserInput = "2,2";
         String splitUserInput = "2";
@@ -151,7 +151,7 @@ public class GameTest {
 
     @Test
     public void testAskPlayerForCoordinatesFailedWithTooHigh() {
-        Pair<Integer, Integer> expectedCoordinates = new Pair<Integer, Integer>(2, 2);
+        Pair<Integer, Integer> expectedCoordinates = Pair.of(2, 2);
         String wrongUserInput = "6,4";
         String goodUserInput = "2,2";
         String wrongWidthUserInput = "6";
@@ -178,7 +178,7 @@ public class GameTest {
 
     @Test
     public void testAskPlayerForGridSizeNominal() {
-        Pair<Integer, Integer> expectedCoordinates = new Pair<Integer, Integer>(5, 5);
+        Pair<Integer, Integer> expectedCoordinates = Pair.of(5, 5);
         String userInput = "5x5";
         String splitUserInput = "5";
 
@@ -194,7 +194,7 @@ public class GameTest {
 
     @Test
     public void testAskPlayerForGridSizeFailedDimensionNegative() {
-        Pair<Integer, Integer> expectedCoordinates = new Pair<Integer, Integer>(5, 5);
+        Pair<Integer, Integer> expectedCoordinates = Pair.of(5, 5);
         String wrongUserInput = "-5x-5";
         String goodUserInput = "5x5";
         String wrongSplitUserInput = "-5";
